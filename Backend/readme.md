@@ -1,63 +1,219 @@
-## Introduction
+# Vidly Backend API
 
-This project is the backend of Vidly, an imaginary video rental app. I've used Vidly as an example in several of my online programming courses, such as:
+A RESTful backend API for a video rental application built using Node.js, Express.js, and MongoDB.
 
-- https://codewithmosh.com/p/mastering-react
-- https://codewithmosh.com/p/the-complete-node-js-course
-- https://codewithmosh.com/p/asp-net-mvc
+The application provides functionality for managing movies, genres, customers, rentals, and user authentication. It demonstrates backend development concepts including REST APIs, authentication, middleware, validation, database integration, and testing.
 
-This is the implementation of Vidly in Node.js.
+---
 
-## Setup
+# Features
 
-Make sure to follow all these steps exactly as explained below. Do not miss any steps or you won't be able to run this application.
+- User Registration and Authentication
+- JWT-based Authorization
+- CRUD Operations
+- Genre Management
+- Movie Management
+- Customer Management
+- Rental Processing
+- MongoDB Integration
+- Input Validation
+- Error Handling
+- Unit and Integration Testing
 
-### Install MongoDB
+---
 
-To run this project, you need to install the latest version of MongoDB Community Edition first.
+# Tech Stack
 
-https://docs.mongodb.com/manual/installation/
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
+- Joi Validation
+- Jest Testing Framework
 
-Once you install MongoDB, make sure it's running.
+---
 
-### Install the Dependencies
+# Project Setup
 
-Next, from the project folder, install the dependencies:
+## 1. Clone the Repository
 
-    npm i
+```bash
+git clone <your-repository-url>
+cd vidly-backend
+```
 
-### Populate the Database
+---
 
-    node seed.js
+## 2. Install Dependencies
 
-### Run the Tests
+Run the following command inside the project folder:
 
-You're almost done! Run the tests to make sure everything is working:
+```bash
+npm install
+```
 
-    npm test
+---
 
-All tests should pass.
+## 3. Install and Run MongoDB
 
-### Start the Server
+Make sure MongoDB Community Edition is installed and running on your machine.
 
-    node index.js
+Default MongoDB connection:
 
-This will launch the Node server on port 3900. If that port is busy, you can set a different point in config/default.json.
+```bash
+mongodb://localhost/vidly
+```
 
-Open up your browser and head over to:
+MongoDB Installation Guide:
 
+https://www.mongodb.com/docs/manual/installation/
+
+---
+
+## 4. Seed the Database
+
+Populate the database with initial data:
+
+```bash
+node seed.js
+```
+
+---
+
+## 5. Run Tests
+
+Run all unit and integration tests:
+
+```bash
+npm test
+```
+
+All tests should pass successfully.
+
+---
+
+## 6. Start the Server
+
+Run the application:
+
+```bash
+node index.js
+```
+
+The server will start on:
+
+```bash
+http://localhost:3900
+```
+
+Test the API in your browser:
+
+```bash
 http://localhost:3900/api/genres
+```
 
-You should see the list of genres. That confirms that you have set up everything successfully.
+If configured correctly, you should see a list of genres.
 
-### (Optional) Environment Variables
+---
 
-If you look at config/default.json, you'll see a property called jwtPrivateKey. This key is used to encrypt JSON web tokens. So, for security reasons, it should not be checked into the source control. I've set a default value here to make it easier for you to get up and running with this project. For a production scenario, you should store this key as an environment variable.
+# Environment Variables
 
-On Mac:
+For production environments, store sensitive configuration values using environment variables.
 
-    export vidly_jwtPrivateKey=yourSecureKey
+## Windows
 
-On Windows:
+```bash
+set vidly_jwtPrivateKey=yourSecureKey
+```
 
-    set vidly_jwtPrivateKey=yourSecureKey
+## Mac/Linux
+
+```bash
+export vidly_jwtPrivateKey=yourSecureKey
+```
+
+---
+
+# API Endpoints
+
+## Genres
+
+| Method | Endpoint |
+|--------|----------|
+| GET | /api/genres |
+| POST | /api/genres |
+| PUT | /api/genres/:id |
+| DELETE | /api/genres/:id |
+
+---
+
+## Movies
+
+| Method | Endpoint |
+|--------|----------|
+| GET | /api/movies |
+| POST | /api/movies |
+| PUT | /api/movies/:id |
+| DELETE | /api/movies/:id |
+
+---
+
+## Customers
+
+| Method | Endpoint |
+|--------|----------|
+| GET | /api/customers |
+| POST | /api/customers |
+| PUT | /api/customers/:id |
+| DELETE | /api/customers/:id |
+
+---
+
+## Rentals
+
+| Method | Endpoint |
+|--------|----------|
+| GET | /api/rentals |
+| POST | /api/rentals |
+
+---
+
+## Users
+
+| Method | Endpoint |
+|--------|----------|
+| POST | /api/users |
+
+---
+
+## Authentication
+
+| Method | Endpoint |
+|--------|----------|
+| POST | /api/auth |
+
+---
+
+# Folder Structure
+
+```bash
+vidly-backend/
+│
+├── config/
+├── middleware/
+├── models/
+├── routes/
+├── startup/
+├── tests/
+├── seed.js
+├── index.js
+├── package.json
+└── README.md
+```
+
+---
+
+# License
+
+This project is developed for educational and learning purposes.
