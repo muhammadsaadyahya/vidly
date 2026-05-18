@@ -1,70 +1,181 @@
-# Getting Started with Create React App
+# Vidly Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern frontend application for the Vidly video rental platform built using React.js.
 
-## Available Scripts
+The frontend allows users to browse movies, manage rentals, authenticate accounts, and interact with the Vidly backend API through a responsive and user-friendly interface.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+# Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- User Authentication
+- Movie Listings
+- Genre Filtering
+- Search Functionality
+- Pagination
+- Protected Routes
+- Responsive UI
+- API Integration
+- Form Validation
+- Client-side Routing
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+# Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React.js
+- React Router
+- Axios
+- Bootstrap / CSS
+- JWT Authentication
+- REST API Integration
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Project Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 1. Clone the Repository
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone <your-repository-url>
+cd vidly-frontend
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 2. Install Dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Run the following command inside the project folder:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 3. Configure Backend API
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Make sure the Vidly backend server is running.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Default backend URL:
 
-### Code Splitting
+```bash
+http://localhost:3900/api
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+# Running the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Start the React development server:
 
-### Making a Progressive Web App
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The application will run on:
 
-### Advanced Configuration
+```bash
+http://localhost:3000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The page will automatically reload when changes are made.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Building for Production
 
-### `npm run build` fails to minify
+Create an optimized production build:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm run build
+```
+
+The production-ready files will be generated inside the `build` folder.
+
+---
+
+# Running Tests
+
+Run frontend tests:
+
+```bash
+npm test
+```
+
+---
+
+# Folder Structure
+
+```bash
+vidly-frontend/
+│
+├── public/
+├── src/
+│   ├── components/
+│   ├── services/
+│   ├── common/
+│   ├── utils/
+│   ├── App.js
+│   └── index.js
+│
+├── package.json
+└── README.md
+```
+
+---
+
+# Main Functionalities
+
+## Authentication
+
+- User Login
+- User Registration
+- JWT Token Handling
+- Protected Routes
+
+---
+
+## Movies
+
+- Display Movies
+- Add Movies
+- Edit Movies
+- Delete Movies
+- Filter by Genre
+
+---
+
+## Rentals
+
+- Rent Movies
+- View Rental Information
+
+---
+
+# API Integration
+
+The frontend communicates with the backend REST API for:
+
+- Authentication
+- Movies Data
+- Genres Data
+- Customers Data
+- Rentals Management
+
+---
+
+# Available Scripts
+
+| Command | Description |
+|----------|-------------|
+| npm start | Runs the app in development mode |
+| npm test | Runs test cases |
+| npm run build | Creates production build |
+| npm run eject | Ejects CRA configuration |
+
+---
+
+# License
+
+This project is developed for educational and learning purposes.
